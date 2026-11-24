@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineBook | Réservation Cinéma</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🎬 CineBook</h1>
+    <nav>
+        <a href="#films">Films</a>
+        <a href="#reservation">Réservation</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Votre cinéma, votre expérience</h2>
+    <p>Réservez votre place en quelques clics</p>
+    <a href="#films" class="btn">Découvrir les films</a>
+</section>
+
+<section id="films">
+    <h2 class="section-title">Nos films</h2>
+
+    <div class="movies">
+
+        <div class="movie">
+            <div class="poster poster1">🌌</div>
+            <h3>Galaxy Adventure</h3>
+            <p>Science-fiction | 2h10</p>
+            <p>Prix : 12 DT</p>
+            <button onclick="chooseMovie('Galaxy Adventure', 12)">
+                Réserver
+            </button>
+        </div>
+
+        <div class="movie">
+            <div class="poster poster2">🕵️</div>
+            <h3>Le Mystère</h3>
+            <p>Thriller | 1h50</p>
+            <p>Prix : 10 DT</p>
+            <button onclick="chooseMovie('Le Mystère', 10)">
+                Réserver
+            </button>
+        </div>
+
+        <div class="movie">
+            <div class="poster poster3">🏝️</div>
+            <h3>Summer Days</h3>
+            <p>Comédie | 1h45</p>
+            <p>Prix : 8 DT</p>
+            <button onclick="chooseMovie('Summer Days', 8)">
+                Réserver
+            </button>
+        </div>
+
+    </div>
+</section>
+
+<section id="reservation">
+    <h2 class="section-title">Votre réservation</h2>
+
+    <div class="booking">
+
+        <p>Film choisi :
+            <strong id="movieName">Aucun film</strong>
+        </p>
+
+        <label for="session">Choisir une séance :</label>
+
+        <select id="session">
+            <option value="14:00">14:00</option>
+            <option value="17:00">17:00</option>
+            <option value="20:00">20:00</option>
+        </select>
+
+        <h3>Choisissez vos sièges</h3>
+
+        <div class="screen">ÉCRAN</div>
+
+        <div id="seats" class="seats"></div>
+
+        <div class="legend">
+            <span>🟩 Disponible</span>
+            <span>🟪 Sélectionné</span>
+            <span>⬜ Occupé</span>
+        </div>
+
+        <p>Nombre de places :
+            <span id="count">0</span>
+        </p>
+
+        <p>Total :
+            <strong id="total">0 DT</strong>
+        </p>
+
+        <button class="confirm" onclick="confirmBooking()">
+            Confirmer la réservation
+        </button>
+
+        <p id="message"></p>
+
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 CineBook - Projet Web</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

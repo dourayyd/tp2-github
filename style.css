@@ -1,0 +1,25 @@
+*{ box-sizing : border-box; }
+ body{
+     font-family: 'Segoe UI',Arial, sans-serif;
+     background:#f0f4f8;
+     margin: 0;
+     padding: 20px;
+     color: #222;
+ }
+form {
+    max-width:640px;
+    margin: 40px auto;
+    background: 32px;
+    border-radius: 12px;
+    box-shadow:0 4px 20px rgba(0,0,0,.08);
+}
+label {display: block; font-weight:600;margin: 14px 0 6px;}
+input ,select ,textarea {
+    width:100%;
+    padding: 10px 12px;
+    border:1px solid #bbb;
+    border-radius: 6px;
+    font-size: 1rem;
+
+}
+legend{font-weight: bold ;padding:0 8px;}
